@@ -90,7 +90,7 @@ eap {
 		# section is processed.  EAP-PWD requests can be
 		# distinguished by having a User-Name, but
 		# no User-Password, CHAP-Password, EAP-Message, etc.
-#		virtual_server = "inner-tunnel"
+#		virtual_server = "default"
 #	}
 
 	# Cisco LEAP
@@ -336,7 +336,7 @@ eap {
 		# Work-arounds for OpenSSL nonsense
 		# OpenSSL 1.0.1f and 1.0.1g do not calculate
 		# the EAP keys correctly.  The fix is to upgrade
-		# OpenSSL, or disable TLS 1.2 here. 
+		# OpenSSL, or disable TLS 1.2 here.
 		#
 		#  For EAP-FAST, this MUST be set to "yes".
 		#
@@ -655,7 +655,7 @@ eap {
 		#  the virtual server that processed the
 		#  outer requests.
 		#
-		virtual_server = "inner-tunnel"
+		virtual_server = "default"
 
 		#  This has the same meaning, and overwrites, the
 		#  same field in the "tls" configuration, above.
@@ -776,7 +776,7 @@ eap {
 		#  the virtual server that processed the
 		#  outer requests.
 		#
-		virtual_server = "inner-tunnel"
+		virtual_server = "default"
 
 		# This option enables support for MS-SoH
 		# see doc/SoH.txt for more info.
@@ -878,6 +878,6 @@ eap {
 
 		# Same as for TTLS, PEAP, etc.
 		#
-#		virtual_server = inner-tunnel
+#		virtual_server = default
 #	}
 }
